@@ -1,0 +1,9 @@
+res://default_env.tres
+res://find_it.tscn
+res://box_select.gd
+res://menu.gd
+res://box_select.tscn
+res://end_screen.tscn
+res://leaderboard.tscn
+res://menu.tscn
+res://find_it_end.tscn

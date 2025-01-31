@@ -1,0 +1,94 @@
+[gd_scene load_steps=9 format=3 uid="uid://c5fou2olbkad6"]
+
+[ext_resource type="Script" path="res://find_it_end.gd" id="1_cqpsm"]
+[ext_resource type="FontFile" uid="uid://lhv5mtg22827" path="res://Deep Shadow Under.ttf" id="1_wqvfk"]
+[ext_resource type="FontFile" uid="uid://ch1ma0a5aif2v" path="res://Deep Shadow Over.ttf" id="2_o51g7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e27dq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_guwka"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xe0bc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_scvjf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5d85k"]
+
+[node name="find_it_end" type="Node2D"]
+script = ExtResource("1_cqpsm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1041.0
+offset_bottom = 613.0
+color = Color(0.231373, 0.231373, 0.231373, 1)
+
+[node name="correct" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -170.0
+offset_top = 21.0
+offset_right = -130.0
+offset_bottom = 61.0
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="correct"]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 120.0
+offset_right = 981.0
+offset_bottom = 197.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_wqvfk")
+theme_override_font_sizes/font_size = 40
+text = "STREETS CORRECT"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="correct"]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 120.0
+offset_right = 981.0
+offset_bottom = 197.0
+theme_override_fonts/font = ExtResource("2_o51g7")
+theme_override_font_sizes/font_size = 40
+text = "STREETS CORRECT"
+horizontal_alignment = 1
+
+[node name="exit" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.0
+offset_top = 526.0
+offset_right = 72.0
+offset_bottom = 566.0
+
+[node name="Label" type="Label" parent="exit"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_wqvfk")
+theme_override_font_sizes/font_size = 30
+text = "EXIT"
+
+[node name="Label2" type="Label" parent="exit"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_o51g7")
+theme_override_font_sizes/font_size = 30
+text = "EXIT"
+
+[node name="Button" type="Button" parent="exit"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -4.0
+offset_right = 100.0
+offset_bottom = 52.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e27dq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_guwka")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xe0bc")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_scvjf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5d85k")
+
+[connection signal="pressed" from="exit/Button" to="." method="_on_button_pressed"]
